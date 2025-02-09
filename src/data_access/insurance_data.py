@@ -54,7 +54,7 @@ class InsuranceData:
             # if "id" in df.columns.to_list():
             #     df = df.drop(columns=["id"], axis=1)
 
-            columns_to_drop = {"id", "_id"}  # Set for O(1) lookups
+            columns_to_drop = {"id"}  # Set for O(1) lookups ("_id" field we can add here, but it will be handled in later processes)
             existing_columns = set(df.columns)  # Convert df.columns to a set
 
             if columns_to_drop & existing_columns:  # Checks if there's any intersection
